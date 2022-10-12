@@ -1,4 +1,6 @@
-class Book {
+package model;
+
+public class Book {
     private String title;
     private String author;
     private int releaseDate;
@@ -55,14 +57,14 @@ class Book {
     }
 
 
-    Book(String bookTitle, String bookAuthor, int bookRelease,
-         int bookPages, String bookPublisher, String bookIsbn) {
+    public Book(String bookTitle, String bookAuthor, int bookRelease,
+                int bookPages, String bookPublisher, String bookIsbn) {
         this(bookTitle, bookAuthor, bookRelease, bookPages, bookPublisher);
         this.isbn = bookIsbn;
     }
 
-    Book(String bookTitle, String bookAuthor, int bookRelease,
-         int bookPages, String bookPublisher) {
+    public Book(String bookTitle, String bookAuthor, int bookRelease,
+                int bookPages, String bookPublisher) {
         title = bookTitle;
         author = bookAuthor;
         releaseDate = bookRelease;
@@ -71,7 +73,7 @@ class Book {
     }
 
 
-    void printInfo() {
+    public void printInfo() {
         String info = title + "; " + author + "; " + releaseDate + "; "
                 + pages + "; " + publisher + "; ";
         if (isbn!= null) {
